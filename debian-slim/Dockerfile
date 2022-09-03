@@ -7,6 +7,14 @@
 
 ARG BASE_IMAGE_TAG="11.4-slim"
 
+ARG SCALA_VERSION="2.13.8"
+ARG SBT_VERSION="1.6.2"
+ARG USER_ID="1001"
+ARG GROUP_ID="1001"
+
 ##########################################################################
 
+# ベースイメージ
 FROM debian:${BASE_IMAGE_TAG}
+
+# 環境変数を設定
