@@ -15,6 +15,10 @@ ARG GROUP_ID="1001"
 ##########################################################################
 
 # ベースイメージ
-FROM debian:${BASE_IMAGE_TAG}
+FROM debian:${BASE_IMAGE_TAG} AS builder
 
 # 環境変数を設定
+ENV SCALA_VERSION ${SCALA_VERSION}
+ENV SBT_VERSION ${SBT_VERSION}
+ENV USER_ID
+ENV GROUP_ID
